@@ -40,6 +40,8 @@ jobs:
         run: npm --prefix client ci
 
       - name: Build web
+        env:
+          VITE_API_BASE: https://ryn-chat-production.up.railway.app
         run: npm --prefix client run build
 
       - name: Sync Capacitor
