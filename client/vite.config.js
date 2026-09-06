@@ -31,7 +31,7 @@ export default defineConfig(({ mode }) => {
         : []),
     ],
     envDir: "..",
-    envPrefix: ["VITE_", "APP_", "CHAT_", "FILE_", "MESSAGE_", "ACCOUNT_", "SIGN_"],
+    envPrefix: ["VITE_", "VITE_", "VITE_", "APP_", "CHAT_", "FILE_", "MESSAGE_", "ACCOUNT_", "SIGN_"],
     build: {
       chunkSizeWarningLimit: 800,
       rollupOptions: {
