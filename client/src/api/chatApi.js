@@ -5,9 +5,15 @@ const withCredentials = (options = {}) => ({
   ...options,
 });
 
-export const apiFetch = (url, options = {}) => fetch(url, withCredentials(options));
+export const apiFetch = (url, options = {}) => {
+  const fullUrl = /^https?:\/\//i.test(url)
+    ? url
+    : `${API_BASE}${url}`;
 
-export const fetchHealth = () => apiFetch(`${API_BASE}/api/health`);
+  return fetch(fullUrl, withCredentials(options));
+};
+
+export const fetchHealth = () => apiFetch("/api/health");
 
 export const pingPresence = (username) =>
   apiFetch(`${API_BASE}/api/presence`, {
