@@ -1,6 +1,6 @@
 import { Suspense, lazy, useEffect, useLayoutEffect, useRef, useState } from 'react'
 import { createPortal } from 'react-dom'
-import logo from './assets/songbird-logo.svg'
+import logo from './assets/ryn-chat-logo.png'
 import { APP_CONFIG, setMessageMaxChars } from './settings/appConfig.js'
 import { fetchAppInfo } from './api/appMetaApi.js'
 import { setNameLimits } from './utils/nameLimits.js'
@@ -54,7 +54,7 @@ function RouteLoadingFallback({ themeColor, onVisibleChange = null }) {
       style={{ backgroundColor: themeColor }}
     >
       <div className="flex flex-col items-center gap-3 text-center text-emerald-700 dark:text-emerald-300">
-        <img src={logo} alt="Songbird logo" className="h-10 w-10 animate-pulse" />
+        <img src={logo} alt="RYN Chat logo" className="h-10 w-10 animate-pulse" />
         <p className="text-xs font-semibold tracking-wide">{`Loading${'.'.repeat(dots)}`}</p>
       </div>
     </div>
@@ -993,10 +993,10 @@ export default function App() {
             <header className="flex flex-wrap items-center justify-center gap-3 text-center sm:gap-4">
               <div className="flex items-center gap-1 text-black dark:text-white">
                 <div className="flex h-8 w-8 items-center justify-center sm:h-9 sm:w-9">
-                  <img src={logo} alt="Songbird logo" className="h-8 w-8" />
+                  <img src={logo} alt="RYN Chat logo" className="h-8 w-8" />
                 </div>
                 <div>
-                  <p className="text-xl font-bold tracking-tight sm:text-2xl">Songbird</p>
+                  <p className="text-xl font-bold tracking-tight sm:text-2xl">RYN Chat</p>
                 </div>
               </div>
             </header>

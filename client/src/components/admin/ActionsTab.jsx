@@ -427,8 +427,8 @@ const ActionsTab = forwardRef(function ActionsTab({ serviceStatus }, ref) {
         title={serviceAction === "stop" ? "Stop service" : "Restart service"}
         message={
           serviceAction === "stop"
-            ? "Stop the Songbird service? The app will go offline until it is started again from the server."
-            : "Restart the Songbird service? The app will be briefly unavailable while it restarts."
+            ? "Stop the RYN Chat service? The app will go offline until it is started again from the server."
+            : "Restart the RYN Chat service? The app will be briefly unavailable while it restarts."
         }
         confirmLabel={
           rowStatus[serviceAction]?.type === "busy"

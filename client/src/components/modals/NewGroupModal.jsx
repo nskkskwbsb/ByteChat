@@ -606,7 +606,7 @@ export default function NewGroupModal({
                           >
                             <span className="flex items-center gap-2">
                               <SongbirdIcon size={16} />
-                              Songbird
+                              RYN Chat
                             </span>
                             {groupForm.remoteChannelProvider === "songbird" ? (
                               <span className="h-2 w-2 rounded-full bg-emerald-500" />

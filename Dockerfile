@@ -48,12 +48,11 @@ COPY package.json ./
 RUN mkdir -p /app/data /app/data/uploads /app/data/backups
 
 ENV APP_ENV=production
-ENV SERVER_PORT=5174
 ENV BIND_ADDRESS=0.0.0.0
 EXPOSE 5174
 
 # Health check for container orchestrators
 HEALTHCHECK --interval=30s --timeout=5s --start-period=10s --retries=3 \
-  CMD node -e "require('http').get('http://localhost:5174/api/health', (r) => {if (r.statusCode !== 200) throw new Error(r.statusCode)})"
+  CMD node -e "require('http').get(`http://localhost:${process.env.PORT || 5174}/api/health`, (r) => {if (r.statusCode !== 200) throw new Error(r.statusCode)})"
 
 CMD ["node", "server/index.js"]
