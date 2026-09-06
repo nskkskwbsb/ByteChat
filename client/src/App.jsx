@@ -8,7 +8,7 @@ import { setChatPageConfig } from './settings/chatPageConfig.js'
 import InstallBar from './components/pwa/InstallBar.jsx'
 import InstallGuideModal from './components/pwa/InstallGuideModal.jsx'
 
-const API_BASE = ''
+const API_BASE = import.meta.env.VITE_API_BASE || ''
 const AUTH_REDIRECT_KEY = 'songbird-auth-redirect'
 const OPEN_CHAT_ID_KEY = 'songbird-open-chat-id'
 const PWA_INSTALL_DISMISS_KEY = 'songbird-pwa-install-dismissed'
