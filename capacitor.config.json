@@ -1,0 +1,5 @@
+{
+  "appId": "com.rynchat.app",
+  "appName": "RYN Chat",
+  "webDir": "client/dist"
+}
